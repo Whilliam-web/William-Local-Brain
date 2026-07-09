@@ -1,0 +1,10 @@
+# Obsidian
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/.cache/
+
+# 系统/编辑器
+.DS_Store
+Thumbs.db
+*.tmp
+*~
