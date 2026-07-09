@@ -1,0 +1,25 @@
+{
+  "id": "conv-1783324176233-eia4c6v1y",
+  "providerId": "codex",
+  "title": "这个文档的作用是什么",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1783324176236,
+  "updatedAt": 1783524758303,
+  "lastResponseAt": 1783524758303,
+  "sessionId": "019f3667-84d2-7e51-acf5-b0507de3f2ee",
+  "providerState": {
+    "threadId": "019f3667-84d2-7e51-acf5-b0507de3f2ee",
+    "sessionFilePath": "C:\\Users\\MS66\\.codex\\sessions\\2026\\07\\06\\rollout-2026-07-06T15-49-41-019f3667-84d2-7e51-acf5-b0507de3f2ee.jsonl",
+    "transcriptRootPath": "C:\\Users\\MS66\\.codex\\sessions"
+  },
+  "usage": {
+    "inputTokens": 62662,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 62336,
+    "contextWindow": 258400,
+    "contextWindowIsAuthoritative": true,
+    "contextTokens": 62662,
+    "percentage": 24,
+    "model": "gpt-5.5"
+  }
+}

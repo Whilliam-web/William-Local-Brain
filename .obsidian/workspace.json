@@ -1,0 +1,246 @@
+{
+  "main": {
+    "id": "bca5ac36f75ce905",
+    "type": "split",
+    "children": [
+      {
+        "id": "1d11736976b77780",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f409801f31f8f471",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "01三两的打工tasks/智能体迭代方案/方案/Hermes自我迭代方案.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Hermes自我迭代方案"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c3d572d0c9c824c1",
+    "type": "split",
+    "children": [
+      {
+        "id": "cc54b15954d82fbe",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "898c7933cdaa73eb",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "1b491a05b0ca6e55",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "5043b6ae2653439c",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "3b5dd86d77945ed3",
+    "type": "split",
+    "children": [
+      {
+        "id": "3c3a9c46441e72ab",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2f72cd8c0d9f808a",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Codex 介绍.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Codex 介绍 的反向链接列表"
+            }
+          },
+          {
+            "id": "2bcdf71afe69d2d3",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Codex 介绍.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Codex 介绍 的出链列表"
+            }
+          },
+          {
+            "id": "afa1fdc8cacdbe0d",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "0f20c4cdedf9c442",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          },
+          {
+            "id": "c66f469d9ac69af3",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Codex 介绍.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Codex 介绍 的大纲"
+            }
+          },
+          {
+            "id": "f2251e48850fb18e",
+            "type": "leaf",
+            "state": {
+              "type": "claudian-view",
+              "state": {},
+              "icon": "bot",
+              "title": "Claudian"
+            }
+          },
+          {
+            "id": "7c937a6df5a82d9d",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 564.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:新建数据库": false,
+      "realclaudian:Open Claudian": false
+    }
+  },
+  "active": "f409801f31f8f471",
+  "lastOpenFiles": [
+    "01三两的打工tasks/智能体迭代方案/方案/Hermes自我迭代方案 - 进度跟踪.md",
+    "01三两的打工tasks/智能体迭代方案/方案/Hermes自我迭代方案.md",
+    "01三两的打工tasks/智能体迭代方案/需求/智能体整体迭代需求.md",
+    "01三两的打工tasks/三角形的行业调研日常/FDE 行业调研/搜集信息/contact-sheet.jpg",
+    "03百宝箱/AI工具库/AI工具基本工作模式.md",
+    "01三两的打工tasks/三角形的行业调研日常/FDE 行业调研/反馈/FDE调研反馈.md",
+    "01三两的打工tasks/三角形的行业调研日常/FDE 行业调研/需求确定/FDE行业调研底稿.md",
+    "01三两的打工tasks/三角形的行业调研日常/FDE 行业调研/需求确定/隐迹智能FDE路径梳理.md",
+    "01三两的打工tasks/智能体迭代方案/方案",
+    "01三两的打工tasks/智能体迭代方案/信息",
+    "01三两的打工tasks/智能体迭代方案/需求",
+    "01三两的打工tasks/智能体迭代方案",
+    "99系统/本地知识库与Agent协作规范.md",
+    "06模版/智能体任务模板.md",
+    "06模版/日历备忘录模板.md",
+    "06模版/工作记录模板.md",
+    "01三两的打工tasks/迭代未来短期自动化工作搭建/工作流需求.md",
+    "01三两的打工tasks/三角形的行业调研日常/FDE 行业调研/搜集信息/LATRACE_AI_BP版_商业计划书.pdf",
+    "99系统/Agent.md.md",
+    "99系统/知识库介绍.md",
+    "Codex 介绍.md",
+    "06模版/项目总览模板.md",
+    "06模版/每周训练记录模板.md",
+    "06模版/反馈复盘模板.md",
+    "06模版/资料卡模板.md",
+    "00收件箱/每日速推/README.md",
+    "00收件箱/每日速推/2026-07-08_每日信息速推.md",
+    "_temp_feishu_message.txt",
+    "scripts/daily_digest_generate.py",
+    "scripts",
+    "_temp_fetched.json",
+    "_temp_search_results.json",
+    "02暗恋对象/Whilliam 健身计划/一周减脂塑形训练计划.md",
+    "01三两的打工tasks/三角形的行业调研日常/FDE 行业调研/搜集信息/FDE市场扫描_联网补充.md",
+    "00收件箱/日历备忘录/index.md",
+    "00收件箱/日历备忘录/2026-07-15.md"
+  ]
+}

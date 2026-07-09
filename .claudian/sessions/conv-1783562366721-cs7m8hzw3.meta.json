@@ -1,0 +1,26 @@
+{
+  "id": "conv-1783562366721-cs7m8hzw3",
+  "providerId": "codex",
+  "title": "帮我阅读这个工作流需求文档，并在这个文档里进行需求文档的撰写，包括需求、开发方案，需要什么等等",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1783562366737,
+  "updatedAt": 1783563028683,
+  "lastResponseAt": 1783563028683,
+  "sessionId": "019f449a-0fcc-7b80-b1ae-c64a1b7d2667",
+  "providerState": {
+    "threadId": "019f449a-0fcc-7b80-b1ae-c64a1b7d2667",
+    "sessionFilePath": "C:\\Users\\MS66\\.codex\\sessions\\2026\\07\\09\\rollout-2026-07-09T09-59-35-019f449a-0fcc-7b80-b1ae-c64a1b7d2667.jsonl",
+    "transcriptRootPath": "C:\\Users\\MS66\\.codex\\sessions"
+  },
+  "currentNote": "01三两的打工tasks/迭代未来短期自动化工作搭建/工作流需求.md",
+  "usage": {
+    "inputTokens": 40157,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 39296,
+    "contextWindow": 258400,
+    "contextWindowIsAuthoritative": true,
+    "contextTokens": 40157,
+    "percentage": 16,
+    "model": "gpt-5.5"
+  }
+}

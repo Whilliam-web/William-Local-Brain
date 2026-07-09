@@ -1,0 +1,105 @@
+{
+  "userName": "",
+  "permissionMode": "yolo",
+  "model": "haiku",
+  "thinkingBudget": "off",
+  "effortLevel": "high",
+  "serviceTier": "default",
+  "enableAutoTitleGeneration": true,
+  "titleGenerationModel": "",
+  "excludedTags": [],
+  "mediaFolder": "",
+  "systemPrompt": "",
+  "persistentExternalContextPaths": [],
+  "sharedEnvironmentVariables": "",
+  "envSnippets": [],
+  "customContextLimits": {},
+  "customModelAliases": {},
+  "keyboardNavigation": {
+    "scrollUpKey": "w",
+    "scrollDownKey": "s",
+    "focusInputKey": "i"
+  },
+  "requireCommandOrControlEnterToSend": false,
+  "locale": "zh-CN",
+  "providerConfigs": {
+    "claude": {
+      "safeMode": "acceptEdits",
+      "cliPath": "",
+      "cliPathsByHost": {},
+      "loadUserSettings": true,
+      "enableChrome": false,
+      "enableBangBash": false,
+      "enableOpus1M": false,
+      "enableSonnet1M": false,
+      "customModels": "",
+      "lastModel": "haiku",
+      "environmentVariables": "",
+      "environmentHash": ""
+    },
+    "codex": {
+      "enabled": true,
+      "safeMode": "workspace-write",
+      "cliPath": "",
+      "cliPathsByHost": {
+        "device:38fd1e33-bec1-4d50-90d9-31fdc815c5c0": "C:\\Users\\MS66\\AppData\\Local\\Programs\\OpenAI\\Codex\\bin\\codex.exe"
+      },
+      "customModels": "gpt-5.5",
+      "reasoningSummary": "detailed",
+      "environmentVariables": "",
+      "environmentHash": "",
+      "installationMethodsByHost": {
+        "device:38fd1e33-bec1-4d50-90d9-31fdc815c5c0": "native-windows"
+      },
+      "wslDistroOverridesByHost": {}
+    },
+    "opencode": {
+      "cliPath": "",
+      "cliPathsByHost": {},
+      "enabled": false,
+      "environmentHash": "",
+      "environmentVariables": "OPENCODE_ENABLE_EXA=1",
+      "modelAliases": {},
+      "preferredThinkingByModel": {},
+      "selectedMode": "",
+      "thinkingOptionsByModel": {},
+      "visibleModels": []
+    },
+    "pi": {
+      "cliPath": "",
+      "cliPathsByHost": {},
+      "discoveredModels": [],
+      "enabled": false,
+      "environmentHash": "",
+      "environmentVariables": "",
+      "modelAliases": {},
+      "preferredThinkingByModel": {},
+      "toolMode": "all",
+      "visibleModels": []
+    }
+  },
+  "settingsProvider": "claude",
+  "savedProviderModel": {
+    "claude": "haiku",
+    "codex": "gpt-5.5"
+  },
+  "savedProviderEffort": {
+    "claude": "high",
+    "codex": "medium"
+  },
+  "savedProviderServiceTier": {
+    "codex": "default"
+  },
+  "savedProviderThinkingBudget": {},
+  "savedProviderPermissionMode": {
+    "claude": "yolo",
+    "codex": "yolo"
+  },
+  "lastCustomModel": "",
+  "maxTabs": 3,
+  "enableAutoScroll": true,
+  "deferMathRenderingDuringStreaming": true,
+  "expandFileEditsByDefault": false,
+  "chatViewPlacement": "right-sidebar",
+  "hiddenProviderCommands": {}
+}
