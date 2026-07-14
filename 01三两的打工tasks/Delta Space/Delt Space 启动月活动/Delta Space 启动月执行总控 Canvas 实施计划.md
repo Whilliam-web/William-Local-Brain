@@ -140,7 +140,7 @@ git diff --check -- '01三两的打工tasks/Delta Space/Delt Space 启动月活�
 
 Expected: 只出现计划内文件，`git diff --check` 无错误。
 
-- [ ] **Step 4: 提交交付物**
+- [x] **Step 4: 提交交付物**
 
 ```powershell
 git add -- '01三两的打工tasks/Delta Space/Delt Space 启动月活动/Delta Space 启动月活动筹备总控.canvas' '01三两的打工tasks/Delta Space/Delt Space 启动月活动/Delta Empower 启动月活动安排.md' '01三两的打工tasks/Delta Space/Delt Space 启动月活动/attachments/delta-space-launch-month-whiteboard-2026-07-14.png' '01三两的打工tasks/Delta Space/Delt Space 启动月活动/Delta Space 启动月执行总控 Canvas 实施计划.md'
