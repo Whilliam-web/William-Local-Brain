@@ -16,7 +16,7 @@
 - Create: `01三两的打工tasks/Delta Space/Delt Space 启动月活动/attachments/delta-space-launch-month-whiteboard-2026-07-14.png`
 - Source: `C:/Users/MS66/AppData/Local/Temp/codex-clipboard-0a57139e-4959-49fb-aaf4-bc726d8f60cb.png`
 
-- [ ] **Step 1: 创建附件目录并复制原图**
+- [x] **Step 1: 创建附件目录并复制原图**
 
 ```powershell
 $target = '01三两的打工tasks/Delta Space/Delt Space 启动月活动/attachments'
@@ -24,7 +24,7 @@ New-Item -ItemType Directory -Force $target | Out-Null
 Copy-Item -LiteralPath 'C:\Users\MS66\AppData\Local\Temp\codex-clipboard-0a57139e-4959-49fb-aaf4-bc726d8f60cb.png' -Destination "$target\delta-space-launch-month-whiteboard-2026-07-14.png"
 ```
 
-- [ ] **Step 2: 校验附件与原图字节一致**
+- [x] **Step 2: 校验附件与原图字节一致**
 
 ```powershell
 Get-FileHash 'C:\Users\MS66\AppData\Local\Temp\codex-clipboard-0a57139e-4959-49fb-aaf4-bc726d8f60cb.png' -Algorithm SHA256
@@ -38,7 +38,7 @@ Expected: 两个 SHA256 值完全一致。
 **Files:**
 - Create: `01三两的打工tasks/Delta Space/Delt Space 启动月活动/Delta Space 启动月活动筹备总控.canvas`
 
-- [ ] **Step 1: 生成 Canvas JSON**
+- [x] **Step 1: 生成 Canvas JSON**
 
 Canvas 顶层只包含 `nodes` 和 `edges`。节点按以下空间区域建立：
 
@@ -51,7 +51,7 @@ Canvas 顶层只包含 `nodes` 和 `edges`。节点按以下空间区域建立�
 
 每个 Step 必须分别包含目的、活动、产出节点；`Link` 节点必须位于 Step 2 分组内，并连接伙伴匹配、外部资源、Office Hour 与验证计划。板书使用 `file` 节点，飞书妙记使用 `link` 节点。
 
-- [ ] **Step 2: 解析 JSON 并验证 Canvas 基本结构**
+- [x] **Step 2: 解析 JSON 并验证 Canvas 基本结构**
 
 ```powershell
 $canvasPath = '01三两的打工tasks\Delta Space\Delt Space 启动月活动\Delta Space 启动月活动筹备总控.canvas'
@@ -63,7 +63,7 @@ if (($canvas.edges.id | Sort-Object -Unique).Count -ne $canvas.edges.Count) { th
 
 Expected: 命令退出码为 0。
 
-- [ ] **Step 3: 验证节点引用、主结构与 Link 归属**
+- [x] **Step 3: 验证节点引用、主结构与 Link 归属**
 
 ```powershell
 $ids = @{}; $canvas.nodes | ForEach-Object { $ids[$_.id] = $true }
@@ -81,7 +81,7 @@ Expected: 命令退出码为 0。
 **Files:**
 - Modify: `01三两的打工tasks/Delta Space/Delt Space 启动月活动/Delta Empower 启动月活动安排.md`
 
-- [ ] **Step 1: 用三步制替换四主题周**
+- [x] **Step 1: 用三步制替换四主题周**
 
 文档必须改为以下主结构：
 
@@ -97,7 +97,7 @@ Expected: 命令退出码为 0。
 
 并保留空间配置、执行保障、衡量指标、风险和来源；删除 Week 1／2／3／4 与“每周五市集”等未经本次讨论确认的固定节奏。
 
-- [ ] **Step 2: 添加 Canvas 与来源链接**
+- [x] **Step 2: 添加 Canvas 与来源链接**
 
 文档顶部加入：
 
@@ -108,7 +108,7 @@ Expected: 命令退出码为 0。
 
 来源区加入板书附件和飞书妙记链接。
 
-- [ ] **Step 3: 检查 Markdown 不再含四周制**
+- [x] **Step 3: 检查 Markdown 不再含四周制**
 
 ```powershell
 rg -n 'Week [1-4]|Week1|Week2|Week3|Week4|四大主题周' '01三两的打工tasks\Delta Space\Delt Space 启动月活动\Delta Empower 启动月活动安排.md'
@@ -123,15 +123,15 @@ Expected: 无匹配，`rg` 返回 1。
 - Verify: `01三两的打工tasks/Delta Space/Delt Space 启动月活动/Delta Empower 启动月活动安排.md`
 - Verify: `01三两的打工tasks/Delta Space/Delt Space 启动月活动/attachments/delta-space-launch-month-whiteboard-2026-07-14.png`
 
-- [ ] **Step 1: 检查 Canvas 节点边界没有重叠**
+- [x] **Step 1: 检查 Canvas 节点边界没有重叠**
 
 对所有非 group 节点执行矩形相交检查；若两个节点的矩形区域相交则失败。Group 节点作为背景容器，不参与重叠失败判断。
 
-- [ ] **Step 2: 对照设计说明逐项验收**
+- [x] **Step 2: 对照设计说明逐项验收**
 
 确认品牌、招募、资源、空间、传播、团队、预算、指标、风险、核心留存、边缘留存、板书来源和妙记来源均已出现。
 
-- [ ] **Step 3: 检查本次差异只触及目标目录**
+- [x] **Step 3: 检查本次差异只触及目标目录**
 
 ```powershell
 git status --short -- '01三两的打工tasks/Delta Space/Delt Space 启动月活动'
