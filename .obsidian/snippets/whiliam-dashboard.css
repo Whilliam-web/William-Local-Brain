@@ -1,0 +1,607 @@
+/* Whiliam editorial workbench — scoped to notes with cssclasses: whiliam-dashboard */
+.whiliam-dashboard {
+  --desk-bg: #111214;
+  --desk-panel: #16181b;
+  --desk-panel-soft: #1b1d21;
+  --desk-line: #292b30;
+  --desk-line-strong: #3a3d43;
+  --desk-text: #e7e3d9;
+  --desk-muted: #96938c;
+  --desk-gold: #d1b86a;
+  --desk-red: #d77b63;
+  --desk-blue: #86a2bf;
+  --desk-green: #89a887;
+  --desk-radius: 2px;
+  background: var(--desk-bg);
+  color: var(--desk-text);
+  font-family: "Inter", "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 13.5px;
+  line-height: 1.58;
+}
+
+.whiliam-dashboard .markdown-preview-sizer,
+.whiliam-dashboard .markdown-source-view.mod-cm6 .cm-sizer {
+  width: calc(100% - 36px) !important;
+  max-width: 1440px !important;
+  margin-inline: auto !important;
+  padding: 18px 0 60px !important;
+}
+
+.whiliam-dashboard .inline-title,
+.whiliam-dashboard .metadata-container,
+.whiliam-dashboard .mod-header {
+  display: none !important;
+}
+
+.whiliam-dashboard .callout {
+  --callout-color: 0, 0, 0;
+  --callout-icon: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: var(--desk-radius);
+  background: transparent;
+  box-shadow: none;
+}
+
+.whiliam-dashboard .callout-fold,
+.whiliam-dashboard .callout-icon {
+  display: none !important;
+}
+
+.whiliam-dashboard .callout-title {
+  min-height: 0;
+  padding: 0;
+  color: var(--desk-muted);
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.whiliam-dashboard .callout-content {
+  margin: 0 !important;
+  padding: 0;
+  overflow: visible;
+}
+
+.whiliam-dashboard p,
+.whiliam-dashboard ul,
+.whiliam-dashboard ol,
+.whiliam-dashboard table,
+.whiliam-dashboard h1,
+.whiliam-dashboard h2,
+.whiliam-dashboard h3 {
+  margin-block-start: 0;
+}
+
+.whiliam-dashboard p {
+  margin-block-end: 10px;
+}
+
+.whiliam-dashboard a,
+.whiliam-dashboard a.internal-link,
+.whiliam-dashboard a.external-link {
+  color: var(--desk-text);
+  text-decoration-color: #5b5a55;
+  text-underline-offset: 3px;
+}
+
+.whiliam-dashboard a:hover,
+.whiliam-dashboard a.internal-link:hover {
+  color: var(--desk-gold);
+  text-decoration-color: var(--desk-gold);
+}
+
+/* Masthead navigation */
+.whiliam-dashboard .callout[data-callout="dashboard-topbar"] {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 16px;
+  border-top: 1px solid var(--desk-line-strong);
+  border-bottom: 1px solid var(--desk-line);
+  background: #0f1012;
+}
+
+.whiliam-dashboard .callout[data-callout="dashboard-topbar"] > .callout-title {
+  color: var(--desk-gold);
+  font-size: 10px;
+  letter-spacing: .2em;
+}
+
+.whiliam-dashboard .callout[data-callout="dashboard-topbar"] > .callout-content {
+  justify-self: end;
+  color: #bbb7ae;
+  font-size: 10px;
+  letter-spacing: .12em;
+}
+
+.whiliam-dashboard .callout[data-callout="dashboard-topbar"] p {
+  margin: 0;
+}
+
+.whiliam-dashboard .callout[data-callout="dashboard-topbar"] a {
+  color: #b7b3aa;
+  text-decoration: none;
+}
+
+/* Atmospheric opening */
+.whiliam-dashboard .callout[data-callout="dashboard-masthead"] {
+  position: relative;
+  min-height: 260px;
+  margin-top: 12px;
+  overflow: hidden;
+  border: 1px solid var(--desk-line);
+  background: #121418;
+  isolation: isolate;
+}
+
+.whiliam-dashboard .callout[data-callout="dashboard-masthead"] > .callout-title {
+  display: none;
+}
+
+.whiliam-dashboard .callout[data-callout="dashboard-masthead"]::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(90deg, rgba(10, 11, 13, .88) 0%, rgba(10, 11, 13, .5) 50%, rgba(10, 11, 13, .75) 100%),
+    linear-gradient(0deg, rgba(10, 11, 13, .72) 0%, transparent 58%);
+}
+
+.whiliam-dashboard .callout[data-callout="dashboard-masthead"] > .callout-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  min-height: 260px;
+  width: 100%;
+  max-width: none;
+  padding: 30px 34px 26px;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.whiliam-dashboard .callout[data-callout="dashboard-masthead"] > .callout-content > *:not(:first-child) {
+  max-width: 720px;
+}
+
+.whiliam-dashboard .callout[data-callout="dashboard-masthead"] > .callout-content > p:first-child {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  margin: 0;
+  max-width: none;
+}
+
+.whiliam-dashboard .callout[data-callout="dashboard-masthead"] .image-embed,
+.whiliam-dashboard .callout[data-callout="dashboard-masthead"] .image-embed img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+}
+
+.whiliam-dashboard .callout[data-callout="dashboard-masthead"] .image-embed img {
+  object-fit: cover;
+  object-position: 50% 48%;
+  filter: saturate(.72) contrast(1.04) brightness(.67);
+}
+
+.whiliam-dashboard .callout[data-callout="dashboard-masthead"] > .callout-content > p:nth-child(2) {
+  margin: 0 0 8px;
+  color: var(--desk-gold);
+  font-size: 10px;
+  font-weight: 650;
+  letter-spacing: .1em;
+}
+
+.whiliam-dashboard .callout[data-callout="dashboard-masthead"] h1 {
+  margin: 0 0 8px;
+  color: #f0ece1;
+  font-family: "Noto Serif SC", "Songti SC", "SimSun", serif;
+  font-size: clamp(25px, 3.25vw, 44px);
+  font-weight: 500;
+  line-height: 1.16;
+  letter-spacing: -.03em;
+}
+
+.whiliam-dashboard .callout[data-callout="dashboard-masthead"] h1 + p {
+  color: #d7d3ca;
+  font-size: 12px;
+}
+
+.whiliam-dashboard .callout[data-callout="dashboard-masthead"] > .callout-content > p:last-child {
+  max-width: 610px;
+  margin: 15px 0 0;
+  padding-top: 11px;
+  border-top: 1px solid rgba(255, 255, 255, .22);
+  color: #bab6ad;
+  font-size: 10px;
+}
+
+.whiliam-dashboard .callout[data-callout="dashboard-masthead"] strong {
+  color: var(--desk-gold);
+  font-size: 9px;
+  letter-spacing: .13em;
+}
+
+/* True three-column editorial body */
+.whiliam-dashboard .callout[data-callout="dashboard-grid"] {
+  margin-top: 12px;
+  border-top: 1px solid var(--desk-line-strong);
+  border-bottom: 1px solid var(--desk-line-strong);
+  border-radius: 0;
+}
+
+.whiliam-dashboard .callout[data-callout="dashboard-grid"] > .callout-title {
+  display: none;
+}
+
+.whiliam-dashboard .callout[data-callout="dashboard-grid"] > .callout-content {
+  display: grid;
+  grid-template-columns: 250px minmax(420px, 1fr) 255px;
+  align-items: start;
+  gap: 0;
+}
+
+.whiliam-dashboard .callout[data-callout="dashboard-left"],
+.whiliam-dashboard .callout[data-callout="dashboard-center"],
+.whiliam-dashboard .callout[data-callout="dashboard-right"] {
+  min-width: 0;
+  padding: 16px;
+  border-radius: 0;
+  background: var(--desk-panel);
+}
+
+.whiliam-dashboard .callout[data-callout="dashboard-left"] {
+  border-right: 1px solid var(--desk-line);
+  background: #141619;
+}
+
+.whiliam-dashboard .callout[data-callout="dashboard-center"] {
+  padding-inline: 20px;
+  background: var(--desk-bg);
+}
+
+.whiliam-dashboard .callout[data-callout="dashboard-right"] {
+  border-left: 1px solid var(--desk-line);
+  background: #141619;
+}
+
+.whiliam-dashboard .callout[data-callout="dashboard-left"] > .callout-title,
+.whiliam-dashboard .callout[data-callout="dashboard-center"] > .callout-title,
+.whiliam-dashboard .callout[data-callout="dashboard-right"] > .callout-title {
+  margin-bottom: 15px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid var(--desk-line-strong);
+}
+
+.whiliam-dashboard .callout[data-callout="dashboard-center"] > .callout-title {
+  color: var(--desk-gold);
+}
+
+.whiliam-dashboard h2 {
+  margin: 0 0 8px;
+  color: var(--desk-text);
+  font-family: "Noto Serif SC", "Songti SC", "SimSun", serif;
+  font-size: 23px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.whiliam-dashboard h3 {
+  margin: 18px 0 9px;
+  padding-top: 8px;
+  border-top: 1px solid var(--desk-line);
+  color: var(--desk-muted);
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.whiliam-dashboard h3::before {
+  content: "●";
+  margin-right: 7px;
+  color: var(--desk-gold);
+  font-size: 7px;
+  vertical-align: 1px;
+}
+
+.whiliam-dashboard .callout[data-callout="dashboard-right"] h3:nth-of-type(3)::before {
+  color: var(--desk-red);
+}
+
+.whiliam-dashboard ul,
+.whiliam-dashboard ol {
+  margin: 0 0 10px;
+  padding-inline-start: 16px;
+}
+
+.whiliam-dashboard li {
+  margin: 4px 0;
+  color: #c5c1b8;
+}
+
+.whiliam-dashboard strong {
+  color: #f0ece2;
+  font-weight: 650;
+}
+
+/* Dynamic surfaces: Bases and Dataview */
+.whiliam-dashboard .internal-embed[alt*="个人工作台每日节奏"] {
+  display: block;
+  min-height: 62px;
+  margin: 0 0 10px;
+  overflow: hidden;
+  border: 1px solid var(--desk-line);
+  background: var(--desk-panel-soft);
+}
+
+.whiliam-dashboard .bases-embed,
+.whiliam-dashboard .bases-view,
+.whiliam-dashboard .bases-cards-container,
+.whiliam-dashboard .bases-cards-cover {
+  background: transparent !important;
+}
+
+.whiliam-dashboard .bases-toolbar,
+.whiliam-dashboard .bases-header {
+  min-height: 26px;
+  border-color: var(--desk-line) !important;
+  font-size: 9px;
+}
+
+.whiliam-dashboard .bases-card,
+.whiliam-dashboard .bases-cards-item {
+  border-color: var(--desk-line) !important;
+  border-radius: 0 !important;
+  background: #1a1c20 !important;
+  box-shadow: none !important;
+}
+
+/* Bases cards use absolute coordinates by default. Normalize them into a compact,
+   stable grid so a seven-day rhythm does not stretch the left rail to 1400px. */
+.whiliam-dashboard .bases-cards-container {
+  height: auto !important;
+  min-height: 0 !important;
+  padding: 6px !important;
+}
+
+.whiliam-dashboard .bases-cards-container > .bases-group-heading,
+.whiliam-dashboard .bases-cards-container > .bases-cards-group[style*="opacity: 0"] {
+  display: none !important;
+}
+
+.whiliam-dashboard .bases-cards-container > .bases-cards-group {
+  position: static !important;
+  display: grid !important;
+  width: 100% !important;
+  height: auto !important;
+  grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+  gap: 6px;
+}
+
+.whiliam-dashboard .bases-cards-item {
+  position: relative !important;
+  inset: auto !important;
+  display: grid !important;
+  width: auto !important;
+  height: auto !important;
+  min-height: 48px;
+  padding: 7px !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 5px 8px;
+}
+
+.whiliam-dashboard .bases-cards-property {
+  position: static !important;
+  inset: auto !important;
+  width: auto !important;
+  height: auto !important;
+  min-width: 0;
+}
+
+.whiliam-dashboard .bases-cards-property.mod-title {
+  grid-column: 1 / -1;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--desk-line);
+}
+
+.whiliam-dashboard .bases-cards-label {
+  color: #77756f !important;
+  font-size: 8.5px !important;
+  letter-spacing: .08em;
+}
+
+.whiliam-dashboard .bases-cards-line,
+.whiliam-dashboard .bases-cards-line input {
+  min-height: 0 !important;
+  padding: 0 !important;
+  color: #c9c5bb !important;
+  font-size: 10.5px !important;
+  line-height: 1.42 !important;
+}
+
+/* Seven-day rhythm is the left rail's primary reading surface. Give its
+   date and four status fields a larger type scale than secondary Base cards. */
+.whiliam-dashboard .bases-view[data-view-name="七日节奏"] .bases-cards-group {
+  gap: 8px;
+}
+
+.whiliam-dashboard .bases-view[data-view-name="七日节奏"] .bases-cards-item {
+  min-height: 68px;
+  padding: 9px !important;
+  gap: 6px 10px;
+}
+
+.whiliam-dashboard .bases-view[data-view-name="七日节奏"] .bases-cards-property.mod-title .bases-cards-line,
+.whiliam-dashboard .bases-view[data-view-name="七日节奏"] .bases-cards-property.mod-title .bases-cards-line input {
+  font-size: 13.5px !important;
+  line-height: 1.35 !important;
+}
+
+.whiliam-dashboard .bases-view[data-view-name="七日节奏"] .bases-cards-property:not(.mod-title) .bases-cards-label {
+  color: #9b9890 !important;
+  font-size: 10px !important;
+}
+
+.whiliam-dashboard .bases-view[data-view-name="七日节奏"] .bases-cards-property:not(.mod-title) .bases-cards-line,
+.whiliam-dashboard .bases-view[data-view-name="七日节奏"] .bases-cards-property:not(.mod-title) .bases-cards-line input {
+  font-size: 12px !important;
+  line-height: 1.4 !important;
+}
+
+.whiliam-dashboard .bases-toolbar-item:not(.bases-toolbar-views-menu):not(.bases-toolbar-results-menu) {
+  display: none !important;
+}
+
+.whiliam-dashboard .bases-toolbar .text-icon-button {
+  min-height: 27px;
+  padding: 4px 6px;
+  color: #8e8b84;
+  font-size: 9.5px;
+}
+
+.whiliam-dashboard .dataview.table-view-table {
+  width: 100%;
+  margin: 0 0 12px;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.whiliam-dashboard .dataview.table-view-table thead {
+  border-top: 1px solid var(--desk-line-strong);
+  border-bottom: 1px solid var(--desk-line-strong);
+}
+
+.whiliam-dashboard .dataview.table-view-table th {
+  padding: 7px 6px;
+  border: 0;
+  color: var(--desk-muted);
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-align: left;
+}
+
+.whiliam-dashboard .dataview.table-view-table td {
+  padding: 8px 6px;
+  border: 0;
+  border-bottom: 1px solid var(--desk-line);
+  color: #c6c2b9;
+  vertical-align: top;
+}
+
+.whiliam-dashboard .dataview.table-view-table tr:hover td {
+  background: rgba(209, 184, 106, .055);
+}
+
+.whiliam-dashboard .dataview-error-box,
+.whiliam-dashboard .dataview.inline-field-standalone-value {
+  color: var(--desk-red);
+  font-size: 11px;
+}
+
+/* Evening review */
+.whiliam-dashboard .callout[data-callout="dashboard-footer"] {
+  margin-top: 12px;
+  padding: 12px 16px;
+  border-top: 1px solid var(--desk-gold);
+  border-bottom: 1px solid var(--desk-line);
+  border-radius: 0;
+  background: #151617;
+}
+
+.whiliam-dashboard .callout[data-callout="dashboard-footer"] > .callout-title {
+  display: none;
+}
+
+.whiliam-dashboard .callout[data-callout="dashboard-footer"] p {
+  margin: 0;
+  color: #aaa69d;
+  font-size: 12px;
+}
+
+.whiliam-dashboard .callout[data-callout="dashboard-footer"] strong {
+  color: var(--desk-gold);
+  font-size: 10px;
+  letter-spacing: .12em;
+}
+
+@media (max-width: 1100px) and (min-width: 760px) {
+  .whiliam-dashboard .markdown-preview-sizer,
+  .whiliam-dashboard .markdown-source-view.mod-cm6 .cm-sizer {
+    width: calc(100% - 20px) !important;
+  }
+
+  .whiliam-dashboard .callout[data-callout="dashboard-grid"] > .callout-content {
+    grid-template-columns: 210px minmax(350px, 1fr) 210px;
+  }
+
+  .whiliam-dashboard .callout[data-callout="dashboard-topbar"] {
+    grid-template-columns: 210px 1fr;
+  }
+
+  .whiliam-dashboard .callout[data-callout="dashboard-left"],
+  .whiliam-dashboard .callout[data-callout="dashboard-right"] {
+    padding-inline: 12px;
+  }
+
+  .whiliam-dashboard .callout[data-callout="dashboard-center"] {
+    padding-inline: 15px;
+  }
+}
+
+@media (max-width: 759px) {
+  .whiliam-dashboard .markdown-preview-sizer,
+  .whiliam-dashboard .markdown-source-view.mod-cm6 .cm-sizer {
+    width: calc(100% - 16px) !important;
+    padding-top: 8px !important;
+  }
+
+  .whiliam-dashboard .callout[data-callout="dashboard-topbar"] {
+    grid-template-columns: 1fr;
+    gap: 5px;
+    padding-block: 9px;
+  }
+
+  .whiliam-dashboard .callout[data-callout="dashboard-topbar"] > .callout-content {
+    justify-self: start;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .whiliam-dashboard .callout[data-callout="dashboard-masthead"],
+  .whiliam-dashboard .callout[data-callout="dashboard-masthead"] > .callout-content {
+    min-height: 230px;
+  }
+
+  .whiliam-dashboard .callout[data-callout="dashboard-masthead"] > .callout-content {
+    padding: 24px 20px 20px;
+  }
+
+  .whiliam-dashboard .callout[data-callout="dashboard-grid"] > .callout-content {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .whiliam-dashboard .callout[data-callout="dashboard-left"] {
+    order: 1;
+    border-right: 0;
+    border-bottom: 1px solid var(--desk-line-strong);
+  }
+
+  .whiliam-dashboard .callout[data-callout="dashboard-center"] {
+    order: 2;
+    border-bottom: 1px solid var(--desk-line-strong);
+  }
+
+  .whiliam-dashboard .callout[data-callout="dashboard-right"] {
+    order: 3;
+    border-left: 0;
+  }
+}
