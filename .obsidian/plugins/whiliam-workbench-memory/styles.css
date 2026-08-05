@@ -1,0 +1,229 @@
+.wwm-root {
+  --wwm-accent: #d7b75b;
+  --wwm-accent-soft: color-mix(in srgb, var(--wwm-accent) 16%, transparent);
+  display: grid;
+  gap: 18px;
+  margin: 8px 0 28px;
+  padding: 22px 24px;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 2px;
+  background:
+    linear-gradient(135deg, var(--wwm-accent-soft), transparent 42%),
+    var(--background-primary-alt);
+  color: var(--text-normal);
+  font-size: max(15.5px, 0.98em);
+}
+
+.wwm-header,
+.wwm-footer,
+.wwm-project,
+.wwm-candidate__heading,
+.wwm-review-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.wwm-eyebrow,
+.wwm-project__label {
+  display: block;
+  color: var(--wwm-accent);
+  font-family: var(--font-monospace);
+  font-size: 0.72em;
+  font-weight: 650;
+  letter-spacing: 0.12em;
+}
+
+.wwm-title {
+  margin: 4px 0 0;
+  font-family: var(--h3-font, var(--font-interface));
+  font-size: 1.38em;
+  line-height: 1.2;
+}
+
+.wwm-status {
+  padding: 6px 10px;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 999px;
+  color: var(--text-muted);
+  font-size: 0.82em;
+  white-space: nowrap;
+}
+
+.wwm-status.is-done {
+  border-color: color-mix(in srgb, var(--color-green) 45%, var(--background-modifier-border));
+  color: var(--color-green);
+}
+
+.wwm-project {
+  justify-content: flex-start;
+  padding: 12px 0;
+  border-block: 1px solid var(--background-modifier-border);
+}
+
+.wwm-project__value {
+  color: var(--text-muted);
+  font-size: 0.92em;
+}
+
+.wwm-list {
+  display: grid;
+  gap: 8px;
+}
+
+.wwm-candidate {
+  display: grid;
+  gap: 5px;
+  width: 100%;
+  padding: 11px 13px;
+  border: 0;
+  border-left: 2px solid transparent;
+  border-radius: 1px;
+  background: color-mix(in srgb, var(--background-primary) 74%, transparent);
+  color: inherit;
+  text-align: left;
+  transition: border-color 120ms ease, background 120ms ease, transform 120ms ease;
+}
+
+.wwm-candidate:hover {
+  border-left-color: var(--wwm-accent);
+  background: var(--background-modifier-hover);
+  transform: translateX(2px);
+}
+
+.wwm-candidate__title {
+  overflow: hidden;
+  font-size: 0.98em;
+  font-weight: 620;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.wwm-candidate__count,
+.wwm-candidate__meta,
+.wwm-candidate-total {
+  color: var(--text-faint);
+  font-size: 0.79em;
+}
+
+.wwm-empty {
+  margin: 4px 0;
+  padding: 20px 8px;
+  color: var(--text-muted);
+  font-family: var(--font-text);
+  line-height: 1.65;
+  text-align: center;
+}
+
+.wwm-primary,
+.wwm-secondary {
+  min-height: 36px;
+  padding: 7px 14px;
+  border-radius: 1px;
+  font-weight: 620;
+}
+
+.wwm-primary {
+  border-color: var(--wwm-accent);
+  background: var(--wwm-accent);
+  color: #171717;
+}
+
+.wwm-secondary {
+  color: var(--text-muted);
+}
+
+.wwm-review-modal {
+  width: min(760px, 92vw);
+}
+
+.wwm-review-modal .modal-title {
+  font-family: var(--h2-font, var(--font-interface));
+  font-size: 1.55em;
+}
+
+.wwm-review-intro,
+.wwm-review-empty {
+  color: var(--text-muted);
+  font-size: 0.95em;
+  line-height: 1.65;
+}
+
+.wwm-review-section {
+  display: grid;
+  gap: 8px;
+  margin: 20px 0 24px;
+}
+
+.wwm-review-section h3 {
+  margin: 0 0 6px;
+  font-size: 1.05em;
+}
+
+.wwm-review-candidate {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 2px;
+}
+
+.wwm-review-candidate__main {
+  display: grid;
+  min-width: 0;
+}
+
+.wwm-review-candidate__main strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.wwm-review-candidate__main small,
+.wwm-review-question small {
+  color: var(--text-faint);
+}
+
+.wwm-review-question {
+  display: grid;
+  gap: 5px;
+  margin: 18px 0;
+  font-size: 1em;
+}
+
+.wwm-review-question textarea {
+  width: 100%;
+  min-height: 78px;
+  padding: 10px 12px;
+  font-size: 1em;
+  line-height: 1.55;
+  resize: vertical;
+}
+
+.wwm-review-actions {
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+
+@media (max-width: 620px) {
+  .wwm-root {
+    padding: 18px 16px;
+  }
+
+  .wwm-header,
+  .wwm-footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .wwm-review-candidate {
+    grid-template-columns: auto 1fr;
+  }
+
+  .wwm-review-candidate select {
+    grid-column: 2;
+  }
+}
