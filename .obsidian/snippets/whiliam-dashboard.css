@@ -430,13 +430,13 @@
 /* Seven-day rhythm is the left rail's primary reading surface. Give its
    date and four status fields a larger type scale than secondary Base cards. */
 .whiliam-dashboard .bases-view[data-view-name="七日节奏"] .bases-cards-group {
-  gap: 8px;
+  gap: 10px;
 }
 
 .whiliam-dashboard .bases-view[data-view-name="七日节奏"] .bases-cards-item {
-  min-height: 68px;
-  padding: 9px !important;
-  gap: 6px 10px;
+  min-height: 82px;
+  padding: 11px 10px !important;
+  gap: 8px 12px;
 }
 
 .whiliam-dashboard .bases-view[data-view-name="七日节奏"] .bases-cards-property.mod-title .bases-cards-line,
@@ -454,6 +454,77 @@
 .whiliam-dashboard .bases-view[data-view-name="七日节奏"] .bases-cards-property:not(.mod-title) .bases-cards-line input {
   font-size: 12px !important;
   line-height: 1.4 !important;
+}
+
+/* Embedded Bases virtualize their cards and recalculate page height while the
+   dashboard scrolls. The homepage uses equivalent DQL tables as stable cards. */
+.whiliam-dashboard .callout:is([data-callout="daily-pulse"], [data-callout="rhythm-cards"], [data-callout="closing-card"]) {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.whiliam-dashboard .callout:is([data-callout="daily-pulse"], [data-callout="rhythm-cards"], [data-callout="closing-card"]) > .callout-title {
+  display: none;
+}
+
+.whiliam-dashboard .callout:is([data-callout="daily-pulse"], [data-callout="rhythm-cards"], [data-callout="closing-card"]) > .callout-content {
+  padding: 0;
+}
+
+.whiliam-dashboard .callout:is([data-callout="daily-pulse"], [data-callout="rhythm-cards"]) .block-language-dataview {
+  margin: 0;
+}
+
+.whiliam-dashboard .callout:is([data-callout="daily-pulse"], [data-callout="rhythm-cards"]) table.dataview {
+  width: 100%;
+  margin: 0;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.whiliam-dashboard .callout:is([data-callout="daily-pulse"], [data-callout="rhythm-cards"]) table.dataview > thead {
+  display: none;
+}
+
+.whiliam-dashboard .callout:is([data-callout="daily-pulse"], [data-callout="rhythm-cards"]) table.dataview > tbody {
+  display: grid;
+  gap: 10px;
+}
+
+.whiliam-dashboard .callout:is([data-callout="daily-pulse"], [data-callout="rhythm-cards"]) table.dataview > tbody > tr {
+  display: grid;
+  box-sizing: border-box;
+  min-height: 82px;
+  padding: 11px 10px;
+  border: 1px solid var(--desk-line);
+  background: #1a1c20;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 12px;
+}
+
+.whiliam-dashboard .callout:is([data-callout="daily-pulse"], [data-callout="rhythm-cards"]) table.dataview > tbody > tr > td {
+  display: block;
+  min-width: 0;
+  padding: 0 !important;
+  border: 0 !important;
+  color: #c9c5bb;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.whiliam-dashboard .callout:is([data-callout="daily-pulse"], [data-callout="rhythm-cards"]) table.dataview > tbody > tr > td:first-child {
+  grid-column: 1 / -1;
+  padding-bottom: 5px !important;
+  border-bottom: 1px solid var(--desk-line) !important;
+  font-family: var(--desk-serif);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.whiliam-dashboard .callout[data-callout="closing-card"] table.dataview {
+  margin-top: 0;
 }
 
 .whiliam-dashboard .bases-toolbar-item:not(.bases-toolbar-views-menu):not(.bases-toolbar-results-menu) {
