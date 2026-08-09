@@ -154,6 +154,14 @@
   line-height: 1.65;
 }
 
+.wwm-review-error {
+  padding: 10px 12px;
+  border-left: 2px solid var(--color-red);
+  color: var(--color-red);
+  background: color-mix(in srgb, var(--color-red) 8%, transparent);
+  line-height: 1.55;
+}
+
 .wwm-review-section {
   display: grid;
   gap: 8px;
@@ -178,6 +186,14 @@
 .wwm-review-candidate__main {
   display: grid;
   min-width: 0;
+}
+
+.wwm-review-candidate__category {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-faint);
+  font-size: 0.8em;
 }
 
 .wwm-review-candidate__main strong {
@@ -227,7 +243,7 @@
     grid-template-columns: auto 1fr;
   }
 
-  .wwm-review-candidate select {
+  .wwm-review-candidate__category {
     grid-column: 2;
   }
 }
