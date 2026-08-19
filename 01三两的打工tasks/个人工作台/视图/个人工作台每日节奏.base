@@ -1,0 +1,94 @@
+filters:
+  and:
+    - file.inFolder("00收件箱/日历备忘录")
+    - type == "memo"
+formulas:
+  work_label: if(work_changes, work_changes, 0).toString() + " 工作"
+  learning_label: if(learning_changes, learning_changes, 0).toString() + " 学习"
+  planning_label: if(planning_changes, planning_changes, 0).toString() + " 规划"
+  review_label: if(review_status == "done", "已收刊", if(review_status == "missed", "可补记", "待收刊"))
+properties:
+  date:
+    displayName: 日期
+  formula.work_label:
+    displayName: 工作
+  formula.learning_label:
+    displayName: 学习
+  formula.planning_label:
+    displayName: 规划
+  formula.review_label:
+    displayName: 状态
+  review_progress:
+    displayName: 今日推进
+  review_learning:
+    displayName: 今日所得
+  tomorrow_focus:
+    displayName: 明日焦点
+views:
+  - type: cards
+    name: 七日节奏
+    filters:
+      and:
+        - date(file.name) >= today() - "6d"
+        - date(file.name) <= today()
+    order:
+      - date
+      - formula.work_label
+      - formula.learning_label
+      - formula.planning_label
+      - formula.review_label
+    sort:
+      - property: date
+        direction: DESC
+    limit: 7
+    cardSize: 170
+  - type: cards
+    name: 今日脉搏
+    filters:
+      and:
+        - file.name == today().format("YYYY-MM-DD")
+    order:
+      - formula.work_label
+      - formula.learning_label
+      - formula.planning_label
+      - formula.review_label
+    sort:
+      - property: date
+        direction: DESC
+    limit: 1
+    cardSize: 180
+  - type: cards
+    name: 今日变化
+    filters:
+      and:
+        - file.name == today().format("YYYY-MM-DD")
+    order:
+      - review_progress
+      - review_learning
+      - tomorrow_focus
+      - formula.review_label
+    sort:
+      - property: date
+        direction: DESC
+    limit: 1
+    cardSize: 360
+  - type: cards
+    name: 最近收刊
+    filters:
+      and:
+        - review_status == "done"
+    order:
+      - date
+      - review_progress
+      - review_learning
+      - tomorrow_focus
+    sort:
+      - property: date
+        direction: DESC
+    limit: 7
+    cardSize: 260
+  - type: table
+    name: 视图
+    sort:
+      - property: file.name
+        direction: ASC

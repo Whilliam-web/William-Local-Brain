@@ -1,0 +1,9 @@
+{
+  "id": "whiliam-workbench-memory",
+  "name": "Whiliam Workbench Memory",
+  "version": "0.1.0",
+  "minAppVersion": "1.12.0",
+  "description": "Local-first daily activity candidates, historical memory and evening review for Whiliam's Obsidian workbench.",
+  "author": "Whiliam",
+  "isDesktopOnly": false
+}

@@ -1,3 +1,6 @@
 {
-  "cssTheme": "Composer"
+  "cssTheme": "Cupertino",
+  "enabledCssSnippets": [
+    "whiliam-dashboard"
+  ]
 }
